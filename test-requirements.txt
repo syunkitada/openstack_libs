@@ -1,0 +1,4 @@
+nose
+coverage
+os-testr
+flake8
