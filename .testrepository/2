@@ -1,0 +1,21 @@
+time: 2015-12-27 03:42:10.237821Z
+tags: worker-0
+test: tests.test_unittest.TestSequenceFunctions.test_choice
+time: 2015-12-27 03:42:10.238962Z
+successful: tests.test_unittest.TestSequenceFunctions.test_choice [ multipart
+]
+tags: -worker-0
+time: 2015-12-27 03:42:10.239224Z
+tags: worker-0
+test: tests.test_unittest.TestSequenceFunctions.test_shuffle
+time: 2015-12-27 03:42:10.239371Z
+successful: tests.test_unittest.TestSequenceFunctions.test_shuffle [ multipart
+]
+tags: -worker-0
+time: 2015-12-27 03:42:10.243073Z
+tags: worker-1
+test: tests.test_unittest.TestSequenceFunctions.test_sample
+time: 2015-12-27 03:42:10.244638Z
+successful: tests.test_unittest.TestSequenceFunctions.test_sample [ multipart
+]
+tags: -worker-1
