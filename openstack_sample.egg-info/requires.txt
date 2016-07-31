@@ -1,7 +1,0 @@
-oslo.config
-oslo.db
-oslo.service
-oslo.messaging
-flask
-cotyledon
-eventlet

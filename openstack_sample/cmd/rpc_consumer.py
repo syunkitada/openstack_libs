@@ -1,9 +1,9 @@
 # coding: utf-8
 
 from openstack_sample.conf import config
-from openstack_sample.service import server_consumer
+from openstack_sample.service import rpc_consumer
 
 
 def main():
     config.init()
-    server_consumer.launch()
+    rpc_consumer.launch()

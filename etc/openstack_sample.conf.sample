@@ -43,14 +43,14 @@
 
 # Uses logging handler designed to watch file system. When log file is moved or
 # removed this handler will open a new log file with specified path
-# instantaneously. It makes sense only if log_file option is specified and
-# Linux platform is used. This option is ignored if log_config_append is set.
-# (boolean value)
+# instantaneously. It makes sense only if log_file option is specified and Linux
+# platform is used. This option is ignored if log_config_append is set. (boolean
+# value)
 #watch_log_file = false
 
 # Use syslog for logging. Existing syslog format is DEPRECATED and will be
-# changed later to honor RFC5424. This option is ignored if log_config_append
-# is set. (boolean value)
+# changed later to honor RFC5424. This option is ignored if log_config_append is
+# set. (boolean value)
 #use_syslog = false
 
 # Syslog facility to receive log lines. This option is ignored if
@@ -68,8 +68,8 @@
 # value)
 #logging_default_format_string = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s
 
-# Additional data to append to log message when logging level for the message
-# is DEBUG. (string value)
+# Additional data to append to log message when logging level for the message is
+# DEBUG. (string value)
 #logging_debug_format_suffix = %(funcName)s %(pathname)s:%(lineno)d
 
 # Prefix each line of exception output with this format. (string value)
@@ -86,8 +86,7 @@
 # Enables or disables publication of error events. (boolean value)
 #publish_errors = false
 
-# The format for an instance that is passed with the log message. (string
-# value)
+# The format for an instance that is passed with the log message. (string value)
 #instance_format = "[instance: %(uuid)s] "
 
 # The format for an instance UUID that is passed with the log message. (string
@@ -127,18 +126,18 @@
 # "host" option, if running Nova. (string value)
 #rpc_zmq_host = localhost
 
-# Seconds to wait before a cast expires (TTL). The default value of -1
-# specifies an infinite linger period. The value of 0 specifies no linger
-# period. Pending messages shall be discarded immediately when the socket is
-# closed. Only supported by impl_zmq. (integer value)
+# Seconds to wait before a cast expires (TTL). The default value of -1 specifies
+# an infinite linger period. The value of 0 specifies no linger period. Pending
+# messages shall be discarded immediately when the socket is closed. Only
+# supported by impl_zmq. (integer value)
 #rpc_cast_timeout = -1
 
 # The default number of seconds that poll should wait. Poll raises timeout
 # exception when timeout expired. (integer value)
 #rpc_poll_timeout = 1
 
-# Expiration timeout in seconds of a name service record about existing target
-# ( < 0 means no timeout). (integer value)
+# Expiration timeout in seconds of a name service record about existing target (
+# < 0 means no timeout). (integer value)
 #zmq_target_expire = 300
 
 # Update period in seconds of a name service record about existing target.
@@ -192,18 +191,18 @@
 # From oslo.service.service
 #
 
-# Enable eventlet backdoor.  Acceptable values are 0, <port>, and
-# <start>:<end>, where 0 results in listening on a random tcp port number;
-# <port> results in listening on the specified port number (and not enabling
-# backdoor if that port is in use); and <start>:<end> results in listening on
-# the smallest unused port number within the specified range of port numbers.
-# The chosen port is displayed in the service's log file. (string value)
+# Enable eventlet backdoor.  Acceptable values are 0, <port>, and <start>:<end>,
+# where 0 results in listening on a random tcp port number; <port> results in
+# listening on the specified port number (and not enabling backdoor if that port
+# is in use); and <start>:<end> results in listening on the smallest unused port
+# number within the specified range of port numbers.  The chosen port is
+# displayed in the service's log file. (string value)
 #backdoor_port = <None>
 
 # Enable eventlet backdoor, using the provided path as a unix socket that can
-# receive connections. This option is mutually exclusive with 'backdoor_port'
-# in that only one should be provided. If both are provided then the existence
-# of this option overrides the usage of that option. (string value)
+# receive connections. This option is mutually exclusive with 'backdoor_port' in
+# that only one should be provided. If both are provided then the existence of
+# this option overrides the usage of that option. (string value)
 #backdoor_socket = <None>
 
 # Enables or disables logging values of all registered options when starting a
@@ -225,8 +224,8 @@
 # Deprecated group/name - [DEFAULT]/sqlite_db
 # This option is deprecated for removal.
 # Its value may be silently ignored in the future.
-# Reason: Should use config option connection or slave_connection to connect
-# the database.
+# Reason: Should use config option connection or slave_connection to connect the
+# database.
 #sqlite_db = oslo.sqlite
 
 # If True, SQLite uses synchronous mode. (boolean value)
@@ -249,8 +248,8 @@
 #slave_connection = <None>
 
 # The SQL mode to be used for MySQL sessions. This option, including the
-# default, overrides any server-set SQL mode. To use whatever SQL mode is set
-# by the server configuration, set this to no value. Example: mysql_sql_mode=
+# default, overrides any server-set SQL mode. To use whatever SQL mode is set by
+# the server configuration, set this to no value. Example: mysql_sql_mode=
 # (string value)
 #mysql_sql_mode = TRADITIONAL
 
@@ -299,8 +298,8 @@
 # Deprecated group/name - [DATABASE]/sqlalchemy_pool_timeout
 #pool_timeout = <None>
 
-# Enable the experimental use of database reconnect on connection lost.
-# (boolean value)
+# Enable the experimental use of database reconnect on connection lost. (boolean
+# value)
 #use_db_reconnect = false
 
 # Seconds between retries of a database transaction. (integer value)
@@ -363,6 +362,27 @@
 
 # Timeout in ms on blocking socket operations (integer value)
 #socket_timeout = 10000
+
+
+[openstack_sample]
+
+#
+# From openstack_sample.conf
+#
+
+# topic (string value)
+#topic = openstack_sample
+
+# host (string value)
+#host = localhost
+
+# IP address to listen on (string value)
+#bind_host = 127.0.0.1
+
+# Port number to listen on (integer value)
+# Minimum value: 1
+# Maximum value: 65535
+#bind_port = 8080
 
 
 [oslo_messaging_amqp]
@@ -442,8 +462,8 @@
 # From oslo.messaging
 #
 
-# The Drivers(s) to handle sending notifications. Possible values are
-# messaging, messagingv2, routing, log, test, noop (multi valued)
+# The Drivers(s) to handle sending notifications. Possible values are messaging,
+# messagingv2, routing, log, test, noop (multi valued)
 # Deprecated group/name - [DEFAULT]/notification_driver
 #driver =
 
@@ -506,8 +526,8 @@
 #kombu_missing_consumer_retry_timeout = 60
 
 # Determines how the next RabbitMQ node is chosen in case the one we are
-# currently connected to becomes unavailable. Takes effect only if more than
-# one RabbitMQ node is provided in config. (string value)
+# currently connected to becomes unavailable. Takes effect only if more than one
+# RabbitMQ node is provided in config. (string value)
 # Allowed values: round-robin, shuffle
 #kombu_failover_strategy = round-robin
 
@@ -519,8 +539,7 @@
 # Reason: Replaced by [DEFAULT]/transport_url
 #rabbit_host = localhost
 
-# DEPRECATED: The RabbitMQ broker port where a single node is used. (port
-# value)
+# DEPRECATED: The RabbitMQ broker port where a single node is used. (port value)
 # Minimum value: 0
 # Maximum value: 65535
 # Deprecated group/name - [DEFAULT]/rabbit_port
@@ -584,21 +603,21 @@
 
 # Try to use HA queues in RabbitMQ (x-ha-policy: all). If you change this
 # option, you must wipe the RabbitMQ database. In RabbitMQ 3.0, queue mirroring
-# is no longer controlled by the x-ha-policy argument when declaring a queue.
-# If you just want to make sure that all queues (except  those with auto-
-# generated names) are mirrored across all nodes, run: "rabbitmqctl set_policy
-# HA '^(?!amq\.).*' '{"ha-mode": "all"}' " (boolean value)
+# is no longer controlled by the x-ha-policy argument when declaring a queue. If
+# you just want to make sure that all queues (except  those with auto-generated
+# names) are mirrored across all nodes, run: "rabbitmqctl set_policy HA
+# '^(?!amq\.).*' '{"ha-mode": "all"}' " (boolean value)
 # Deprecated group/name - [DEFAULT]/rabbit_ha_queues
 #rabbit_ha_queues = false
 
 # Positive integer representing duration in seconds for queue TTL (x-expires).
-# Queues which are unused for the duration of the TTL are automatically
-# deleted. The parameter affects only reply and fanout queues. (integer value)
+# Queues which are unused for the duration of the TTL are automatically deleted.
+# The parameter affects only reply and fanout queues. (integer value)
 # Minimum value: 1
 #rabbit_transient_queues_ttl = 1800
 
-# Specifies the number of messages to prefetch. Setting to zero allows
-# unlimited messages. (integer value)
+# Specifies the number of messages to prefetch. Setting to zero allows unlimited
+# messages. (integer value)
 #rabbit_qos_prefetch_count = 0
 
 # Number of seconds after which the Rabbit broker is considered down if
@@ -606,8 +625,8 @@
 # value)
 #heartbeat_timeout_threshold = 60
 
-# How often times during the heartbeat_timeout_threshold we check the
-# heartbeat. (integer value)
+# How often times during the heartbeat_timeout_threshold we check the heartbeat.
+# (integer value)
 #heartbeat_rate = 2
 
 # Deprecated, use rpc_backend=kombu+memory or rpc_backend=fake (boolean value)
@@ -632,8 +651,7 @@
 # Set socket timeout in seconds for connection's socket (floating point value)
 #socket_timeout = 0.25
 
-# Set TCP_USER_TIMEOUT in seconds for connection's socket (floating point
-# value)
+# Set TCP_USER_TIMEOUT in seconds for connection's socket (floating point value)
 #tcp_user_timeout = 0.25
 
 # Set delay for reconnection to some host which has connection error (floating
@@ -647,16 +665,15 @@
 # Maximum number of connections to keep queued. (integer value)
 #pool_max_size = 30
 
-# Maximum number of connections to create above `pool_max_size`. (integer
-# value)
+# Maximum number of connections to create above `pool_max_size`. (integer value)
 #pool_max_overflow = 0
 
 # Default number of seconds to wait for a connections to available (integer
 # value)
 #pool_timeout = 30
 
-# Lifetime of a connection (since creation) in seconds or None for no
-# recycling. Expired connections are closed on acquire. (integer value)
+# Lifetime of a connection (since creation) in seconds or None for no recycling.
+# Expired connections are closed on acquire. (integer value)
 #pool_recycle = 600
 
 # Threshold at which inactive (since release) connections are considered stale
@@ -670,8 +687,8 @@
 # Exchange name for sending notifications (string value)
 #default_notification_exchange = ${control_exchange}_notification
 
-# Max number of not acknowledged message which RabbitMQ can send to
-# notification listener. (integer value)
+# Max number of not acknowledged message which RabbitMQ can send to notification
+# listener. (integer value)
 #notification_listener_prefetch_count = 100
 
 # Reconnecting retry count in case of connectivity problem during sending
@@ -699,12 +716,12 @@
 # listener. (integer value)
 #rpc_reply_listener_prefetch_count = 100
 
-# Reconnecting retry count in case of connectivity problem during sending
-# reply. -1 means infinite retry during rpc_timeout (integer value)
+# Reconnecting retry count in case of connectivity problem during sending reply.
+# -1 means infinite retry during rpc_timeout (integer value)
 #rpc_reply_retry_attempts = -1
 
-# Reconnecting retry delay in case of connectivity problem during sending
-# reply. (floating point value)
+# Reconnecting retry delay in case of connectivity problem during sending reply.
+# (floating point value)
 #rpc_reply_retry_delay = 0.25
 
 # Reconnecting retry count in case of connectivity problem during sending RPC

@@ -2,6 +2,6 @@ oslo.config
 oslo.db
 oslo.service
 oslo.messaging
+werkzeug
 flask
-cotyledon  # replase from oslo.service on ceilomter
 eventlet

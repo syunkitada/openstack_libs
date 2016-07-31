@@ -10,4 +10,4 @@ $prefix/bin/python setup.py develop
 
 tox -egenconfig
 mkdir -p /etc/openstack_sample/
-cp etc/openstack_sample.conf.sample /etc/openstack_sample/openstack_sample.conf
+[ -e /etc/openstack_sample/openstack_sample.conf ] || cp etc/openstack_sample.conf.sample /etc/openstack_sample/openstack_sample.conf

@@ -8,6 +8,7 @@
 .tox
 .idea
 .venv
+*.egg-info
 AUTHORS
 Authors
 build-stamp

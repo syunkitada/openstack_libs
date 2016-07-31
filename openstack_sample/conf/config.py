@@ -2,14 +2,16 @@
 
 from oslo_config import cfg
 from oslo_log import log
-from openstack_sample.conf import constant
+from openstack_sample.conf import constant, opts
+
+LOG = log.getLogger(__name__)
 
 CONF = cfg.CONF
-LOG = log.getLogger(__name__)
+CONF.register_opts(opts.openstack_sample_opts, 'openstack_sample')
 
 
 def init():
-    CONF([], default_config_files=[constant.INIFILE])
     log.register_options(CONF)
+    CONF([], default_config_files=[constant.INIFILE])
     log.setup(CONF, constant.LOG_DOMEIN)
     LOG.info('init conf')
