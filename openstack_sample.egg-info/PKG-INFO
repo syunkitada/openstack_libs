@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: openstack-sample
+Version: 0.0.1.dev3
+Summary: Openstack Sample
+Home-page: https://github.com/syunkitada
+Author: Shunya Kitada
+Author-email: syun.kitada@gmail.com
+License: UNKNOWN
+Description: # openstack_sample
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

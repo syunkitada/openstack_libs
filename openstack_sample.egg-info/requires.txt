@@ -3,5 +3,5 @@ oslo.db
 oslo.service
 oslo.messaging
 flask
-cotyledon  # replase from oslo.service on ceilomter
+cotyledon
 eventlet
